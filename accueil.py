@@ -22,4 +22,5 @@ def init():
     game.current_score=0
     game.frame=1
     game.throw=1
+    game.frame_score=0
     return redirect(url_for("index"))
