@@ -23,4 +23,5 @@ def init():
     game.frame=1
     game.throw=1
     game.frame_score=0
+    game.rest_pins=15  
     return redirect(url_for("index"))

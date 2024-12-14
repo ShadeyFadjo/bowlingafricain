@@ -11,9 +11,10 @@
         <p>Frame numéro: {{ game.frame }}</p>
         <p>Lancer numéro: {{ game.throw }}</p>
         <p>Nombre de quilles touchées: 
-        <input type="number" id="pins_knocked" max="15" name="pins_knocked">
+        <input type="number" id="pins_knocked" max="{{ game.rest_pins }}" name="pins_knocked">
         <input type="submit" value="Submit">
         </p> 
+        <p>Reste de quilles sur ce frame: {{ game.rest_pins }}</p>
         <p>Score sur ce frame: {{ game.frame_score }}</p>
         <hr/>
         <p>Score actuel: {{ game.current_score }}</p>
