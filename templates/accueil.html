@@ -7,11 +7,18 @@
 </head>
 <body>
     <h1>African Bowling</h1>
-    <p>Frame numéro: </p>
-    <p>Lancer numéro: </p>
-    <p>Nombre de quilles touchées: </p>
-    <hr/>
-    <p>Score actuel: </p>
-
+    <form method="POST" action="/submit">
+        <p>Frame numéro: {{ game.frame }}</p>
+        <p>Lancer numéro: {{ game.throw }}</p>
+        <p>Nombre de quilles touchées: 
+        <input type="number" id="pins_knocked" max="15" name="pins_knocked">
+        <input type="submit" value="Submit">
+        </p> 
+        <hr/>
+        <p>Score actuel: {{ game.current_score }}</p>
+    </form>
+    <form method="POST" action="/init">
+        <input type="submit" value="Init game">
+    </form>
 </body>
 </html>
