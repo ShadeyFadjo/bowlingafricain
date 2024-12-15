@@ -16,5 +16,3 @@
 Enter the total number of pins knocked down in this new input field, and then submit
 - All other processes are automated
 - Press the button 'Init game' to re-init the game
-
-
