@@ -16,8 +16,9 @@ class Game:
                 self.bonus=3
             else :
                 self.bonus=2
-        if self.throw==3:
-            self.end_frame()
+        if self.throw>=3:
+            if self.rest_pins!=0:  
+                self.end_frame()
         else :
             self.throw += 1 
 
