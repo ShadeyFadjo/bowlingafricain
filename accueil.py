@@ -26,3 +26,10 @@ def init():
     game.rest_pins=15 
     game.bonus=0 
     return redirect(url_for("index"))
+
+@app.route("/bonus", methods=["POST"])
+def bonus():
+    pins_knock=request.form.get("pins_knock")
+    game.frame_score+=int(pins_knock)
+    game.end_frame()
+    return redirect(url_for("index"))

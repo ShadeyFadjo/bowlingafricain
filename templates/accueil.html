@@ -14,19 +14,19 @@
         <input type="number" id="pins_knocked" max="{{ game.rest_pins }}" name="pins_knocked">
         <input type="submit" value="Submit">
         </p> 
+    </form>
         {% if game.rest_pins==0 %}
-            <!-- {% if game.throw==1 %}
-            {%    game.bonus=3  %}
-            {% else game.bonus=2 %}
-            {% endif %} -->
+        <form method="POST" action="/bonus">
             <p> Total des nombres de quilles abattues après les {{ game.bonus }} lancées bonus: 
-                <input type="number" id="pins_knock" max="30" name="pins_knock"></p>
+            <input type="number" id="pins_knock" max="100" name="pins_knock">
+            <input type="submit" value="Submit"></p>
+        </form>
         {% endif %}
         <p>Reste de quilles sur ce frame: {{ game.rest_pins }}</p>
         <p>Score sur ce frame: {{ game.frame_score }}</p>
         <hr/>
         <p>Score actuel: {{ game.current_score }}</p>
-    </form>
+    
     <form method="POST" action="/init">
         <input type="submit" value="Init game">
     </form>
